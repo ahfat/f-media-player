@@ -63,7 +63,7 @@ body::before {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.25rem 1.5rem 0.75rem;
+  padding: 0.9rem 1.5rem 0.5rem;
   animation: rise 0.7s ease both;
 }
 
@@ -78,7 +78,7 @@ body::before {
 .brand-mark {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   letter-spacing: -0.04em;
   line-height: 1;
 }
@@ -144,9 +144,9 @@ body::before {
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
-  gap: 1.25rem;
-  padding: 0.5rem 1.5rem 1.25rem;
-  align-items: stretch;
+  gap: 1rem;
+  padding: 0.35rem 1.5rem 0.75rem;
+  align-items: start;
 }
 
 @media (max-width: 900px) {
@@ -170,7 +170,8 @@ body::before {
   background: var(--stage);
   box-shadow: var(--shadow);
   aspect-ratio: 16 / 9;
-  min-height: 280px;
+  width: 100%;
+  max-height: min(52vh, 520px);
 }
 
 .stage video {
@@ -273,8 +274,8 @@ body::before {
 .now-playing {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  min-height: 3.2rem;
+  gap: 0.15rem;
+  min-height: 2.6rem;
 }
 
 .now-playing .label {
@@ -504,7 +505,7 @@ body::before {
   padding: 0.5rem;
   overflow: auto;
   flex: 1;
-  max-height: min(58vh, 520px);
+  max-height: min(62vh, 560px);
 }
 
 .playlist:empty::after {
@@ -593,9 +594,9 @@ body::before {
 }
 
 .footer-hint {
-  padding: 0 1.5rem 1.35rem;
+  padding: 0 1.5rem 0.9rem;
   color: var(--ink-soft);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   animation: rise 1s ease 0.22s both;
 }
 
