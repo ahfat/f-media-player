@@ -319,7 +319,7 @@ sampleBtn.addEventListener('click', async () => {
   sampleBtn.disabled = true
   sampleBtn.textContent = 'Loading…'
   try {
-    const response = await fetch('/samples/sample.mp4')
+    const response = await fetch(`${import.meta.env.BASE_URL}samples/sample.mp4`)
     if (!response.ok) throw new Error('Sample missing')
     const blob = await response.blob()
     const file = new File([blob], 'sample-clip.mp4', { type: blob.type || 'video/mp4' })
