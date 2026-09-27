@@ -59,8 +59,8 @@ app.innerHTML = `
       </div>
 
       <div class="now-playing">
-        <span class="label">Now playing</span>
-        <span class="title" id="now-title">Nothing queued</span>
+        <span class="label">Now playing...</span>
+        <span class="title" id="now-title">Nothing queued*</span>
       </div>
 
       <div class="controls">
