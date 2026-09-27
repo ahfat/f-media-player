@@ -33,6 +33,13 @@ jobs:
       - name: Build
         run: npm run build:pages
 
+      - name: Ensure Pages source is GitHub Actions
+        run: |
+          gh api --method PUT "repos/${{ github.repository }}/pages" -f build_type=workflow \
+            || echo "Could not switch Pages source automatically; set Settings > Pages > Source to 'GitHub Actions'."
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
